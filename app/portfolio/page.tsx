@@ -1,24 +1,101 @@
-'use client';
+
 import type { Metadata } from "next";
 
 import PageHero from "../components/PageHero";
-import { usePortfolioFilter } from "../utils/interactions";
 import { common } from "../content";
+import PortfolioButtons from "./portfolioFilter";
 
-// export const metadata: Metadata = {
-//   title: "Our Portfolio - TechVision | IT Solutions Company",
-//   description: "Explore TechVision's portfolio of successful projects including web applications, mobile apps, cloud solutions, and AI-powered platforms.",
-//   keywords: "portfolio, case studies, projects, web development, mobile apps, software solutions",
-// };
+export const metadata: Metadata = {
+  title: {
+    default: `Portfolio - ${common.companyName} | Success Stories & Case Studies`,
+    template: `%s Portfolio | ${common.companyName}`
+  },
+  description: `Explore ${common.companyName}'s diverse portfolio of successful projects across industries. Our case studies showcase expertise in web development, mobile apps, AI solutions, cloud computing, and digital transformation.`,
+  keywords: [
+    "portfolio",
+    "case studies",
+    "success stories",
+    "web development projects",
+    "mobile app development",
+    "AI solutions portfolio",
+    "cloud computing projects",
+    "software development portfolio",
+    "digital transformation projects",
+    "e-commerce solutions",
+    "UI/UX design portfolio",
+    "enterprise solutions",
+    "business applications",
+    "technology consulting",
+    "IT solutions portfolio",
+    "professional projects",
+    "client success stories",
+    "project showcases",
+    "development portfolio",
+    "tech portfolio",
+    "innovation projects",
+    "software engineering",
+    "application development",
+    "system integration",
+    "business technology solutions",
+    "digital solutions portfolio",
+    "expert IT services",
+    "technology implementation",
+    "business automation projects",
+    "custom software solutions",
+    "professional IT portfolio"
+  ],
+  openGraph: {
+    title: `Portfolio - ${common.companyName} | Success Stories & Case Studies`,
+    description: `Explore ${common.companyName}'s diverse portfolio of successful projects across industries. Our case studies showcase expertise in web development, mobile apps, AI solutions, cloud computing, and digital transformation.`,
+    url: '/portfolio',
+    siteName: common.companyName,
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: `Portfolio - ${common.companyName} - Success Stories & Case Studies`,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Portfolio - ${common.companyName} | Success Stories & Case Studies`,
+    description: `Explore ${common.companyName}'s diverse portfolio of successful projects across industries. Our case studies showcase expertise in web development, mobile apps, AI solutions, cloud computing, and digital transformation.`,
+    images: ['/og-image.jpg'],
+    creator: '@tsglobaltech',
+  },
+  alternates: {
+    canonical: '/portfolio',
+    languages: {
+      'en-US': '/en/portfolio',
+      'en-GB': '/en/portfolio',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+
 
 export default function Portfolio() {
-  // Use the custom portfolio filter hook
-  usePortfolioFilter();
+
 
   return (
     <>
 
-<PageHero
+      <PageHero
         badge="Our Portfolio"
         title="Success "
         titleGradient="Stories"
@@ -30,24 +107,8 @@ export default function Portfolio() {
       <section className="py-12 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            <button className="portfolio-filter active bg-primary-500 text-white px-6 py-2 rounded-full transition-all duration-300" data-filter="all">
-              All Projects
-            </button>
-            <button className="portfolio-filter bg-white/5 text-dark-300 hover:bg-white/10 px-6 py-2 rounded-full transition-all duration-300" data-filter="web">
-              Web Development
-            </button>
-            <button className="portfolio-filter bg-white/5 text-dark-300 hover:bg-white/10 px-6 py-2 rounded-full transition-all duration-300" data-filter="mobile">
-              Mobile Apps
-            </button>
-            <button className="portfolio-filter bg-white/5 text-dark-300 hover:bg-white/10 px-6 py-2 rounded-full transition-all duration-300" data-filter="cloud">
-              Cloud Solutions
-            </button>
-            <button className="portfolio-filter bg-white/5 text-dark-300 hover:bg-white/10 px-6 py-2 rounded-full transition-all duration-300" data-filter="ai">
-              AI & ML
-            </button>
-          </div>
 
+          <PortfolioButtons />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 - E-Commerce Platform */}
             <div className="portfolio-item group" data-category="web">
@@ -55,7 +116,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">E-Commerce Platform</h3>
@@ -79,7 +140,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">Healthcare App</h3>
@@ -102,7 +163,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">Cloud Migration</h3>
@@ -125,7 +186,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">AI Analytics Dashboard</h3>
@@ -148,7 +209,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">SaaS Dashboard</h3>
@@ -171,7 +232,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">Fitness App</h3>
@@ -194,7 +255,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">Learning Platform</h3>
@@ -217,7 +278,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">Serverless Platform</h3>
@@ -240,7 +301,7 @@ export default function Portfolio() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                     </svg>
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-white mb-2">Chatbot Platform</h3>
