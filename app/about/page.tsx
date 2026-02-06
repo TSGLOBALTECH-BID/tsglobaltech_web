@@ -1,6 +1,7 @@
 'use client';
 
 import PageHero from "../components/PageHero";
+import { common } from "../content";
 
 // export const metadata: Metadata = {
 //   title: "About Us - TechVision | IT Solutions Company",
@@ -13,7 +14,7 @@ export default function About() {
     <>
 
       <PageHero
-        badge="About TechVision"
+        badge={`About ${common.companyName}`}
         title="Pioneering "
         titleGradient="Digital Innovation"
         description="We're a team of passionate technologists dedicated to transforming businesses through cutting-edge software solutions and innovative digital strategies."
@@ -31,13 +32,13 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-dark-300">
                 <p>
-                  Founded in 2009, TechVision began as a small team of three passionate developers with a simple mission: to make enterprise-grade technology accessible to businesses of all sizes.
+                  Founded in January 2025, TS Global Tech emerged from a vision to bridge the gap between cutting-edge technology and practical business solutions. Our journey began with a team of experienced professionals who recognized the growing need for innovative, scalable IT services in an increasingly digital world.
                 </p>
                 <p>
-                  Over the past 15 years, we've grown into a global team of over 50 professionals, serving clients across 30+ countries. Our journey has been marked by continuous innovation, unwavering commitment to quality, and a relentless focus on delivering results that matter.
+                  We've already established ourselves as a forward-thinking technology partner, leveraging the latest advancements in AI, cloud computing, and cybersecurity. Our team combines decades of collective experience with fresh perspectives to deliver solutions that are both innovative and practical.
                 </p>
                 <p>
-                  Today, TechVision stands as a trusted technology partner for Fortune 500 companies, ambitious startups, and everything in between. We've delivered 500+ projects, helped launch 12 IPOs, and our solutions process over 10 billion transactions annually.
+                  Today, TS Global Tech is positioned at the forefront of digital transformation, helping businesses harness the power of emerging technologies. We're building a reputation for delivering exceptional results, fostering long-term partnerships, and pushing the boundaries of what's possible in the digital landscape.
                 </p>
               </div>
             </div>
@@ -45,20 +46,20 @@ export default function About() {
               <div className="bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl p-8 border border-white/10">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <div className="text-4xl font-bold text-primary-400 mb-2">2009</div>
-                    <div className="text-dark-400 text-sm">Founded</div>
+                    <div className="text-4xl font-bold text-primary-400 mb-2">{common.stats[0].value}+</div>
+                    <div className="text-dark-400 text-sm">{common.stats[0].label}</div>
                   </div>
                   <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <div className="text-4xl font-bold text-secondary-400 mb-2">50+</div>
-                    <div className="text-dark-400 text-sm">Team Members</div>
+                    <div className="text-4xl font-bold text-secondary-400 mb-2">{common.stats[1].value}+</div>
+                    <div className="text-dark-400 text-sm">{common.stats[1].label}</div>
                   </div>
                   <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <div className="text-4xl font-bold text-accent-400 mb-2">500+</div>
-                    <div className="text-dark-400 text-sm">Projects Delivered</div>
+                    <div className="text-4xl font-bold text-accent-400 mb-2">{common.stats[2].value}+</div>
+                    <div className="text-dark-400 text-sm">{common.stats[2].label}</div>
                   </div>
                   <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <div className="text-4xl font-bold text-green-400 mb-2">30+</div>
-                    <div className="text-dark-400 text-sm">Countries Served</div>
+                    <div className="text-4xl font-bold text-green-400 mb-2">{common.stats[3].value}+</div>
+                    <div className="text-dark-400 text-sm">{common.stats[3].label}</div>
                   </div>
                 </div>
               </div>
@@ -170,7 +171,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-dark-900/50">
+      {/* <section className="py-24 bg-dark-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium mb-4">Our Team</span>
@@ -204,7 +205,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">

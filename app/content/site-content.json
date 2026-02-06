@@ -1,0 +1,193 @@
+{
+  "common": {
+    "companyName": "TS Global Tech",
+    "companyNameShort": "TS <span class=\"text-primary-400\">Global Tech</span>",
+    "companyDescription": "Leading IT solutions provider delivering innovative technology services to businesses worldwide since 2025.",
+    "tagline": "Leading IT Solutions Provider",
+    "contact": {
+      "address": "Ghaziabad, Uttar Pradesh, India",
+      "email": "team@tsglobaltech.com",
+      "phone": "+91 9355510301",
+      "lattitude":"28.664774",
+      "longitude":"77.392265"
+    },
+    "socialLinks": {
+      "twitter": "#",
+      "facebook": "https://www.facebook.com/people/TS-Global-TECH/61566470257707/",
+      "linkedin": "#"
+    },
+    "navItems": [
+      { "name": "Home", "href": "/" },
+      { "name": "About", "href": "/about" },
+      { "name": "Services", "href": "/services" },
+      { "name": "Portfolio", "href": "/portfolio" },
+      { "name": "Contact", "href": "/contact" }
+    ],
+    "footerLinks": {
+      "services": [
+        { "name": "Web Development", "href": "/services" },
+        { "name": "Mobile Apps", "href": "/services" },
+        { "name": "Cloud Solutions", "href": "/services" },
+        { "name": "AI & Machine Learning", "href": "/services" },
+        { "name": "Cybersecurity", "href": "/services" },
+        { "name": "UI/UX Design", "href": "/services" }
+      ],
+      "company": [
+        { "name": "About Us", "href": "/about" },
+        { "name": "Portfolio", "href": "/portfolio" },
+        { "name": "Services", "href": "/services" },
+        { "name": "Contact", "href": "/contact" }
+      ],
+      "legal": [
+        { "name": "Privacy Policy", "href": "/contact" },
+        { "name": "Terms of Service", "href": "/contact" }
+      ]
+    },
+    "legalText": "Powered by 'TS Global Tech' Team.",
+    "stats": [
+      { "value": 150, "label": "Projects Delivered" },
+      { "value": 100, "label": "Happy Clients" },
+      { "value": 50, "label": "Team Members" },
+      { "value": 15, "label": "Years Experienced Team" }
+    ]
+  },
+   
+  "hero": {
+    "badge": "Leading IT Solutions Provider",
+    "title": "Innovate.",
+    "titleGradient": "Transform.",  
+    "titleSuffix": "Succeed.",
+    "subtitle": "We craft cutting-edge digital solutions that empower businesses to thrive in the modern technological landscape. From AI-driven applications to cloud-native platforms, we turn your vision into reality.",
+    "ctaPrimary": {
+      "text": "Start Your Project",
+      "href": "/contact"
+    },
+    "ctaSecondary": {
+      "text": "View Our Work",
+      "href": "/portfolio"
+    }
+  },
+  "services": {
+    "sectionBadge": "Our Expertise",
+    "sectionTitle": "Comprehensive",
+    "sectionTitleGradient": "IT Solutions",
+    "sectionSubtitle": "From concept to deployment, we deliver end-to-end technology services tailored to your unique business requirements.",
+    "viewAllText": "View All Services",
+    "items": [
+      {
+        "name": "AI & Machine Learning",
+        "description": "Intelligent automation and data-driven solutions powered by advanced AI and ML algorithms.",
+        "learnMoreHref": "/services",
+        "icon": "ai",
+        "color": "green"
+      },
+      {
+        "name": "Web Development",
+        "description": "Custom websites and web applications built with modern frameworks like React, Vue, and Next.js for optimal performance.",
+        "learnMoreHref": "/services",
+        "icon": "desktop",
+        "color": "primary"
+      },
+      {
+        "name": "Mobile Apps",
+        "description": "Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.",
+        "learnMoreHref": "/services",
+        "icon": "mobile",
+        "color": "secondary"
+      },
+      {
+        "name": "Cloud Solutions",
+        "description": "Scalable cloud infrastructure and migration services using AWS, Azure, and Google Cloud platforms.",
+        "learnMoreHref": "/services",
+        "icon": "cloud",
+        "color": "accent"
+      },
+      {
+        "name": "Cybersecurity",
+        "description": "Comprehensive security solutions to protect your digital assets and ensure regulatory compliance.",
+        "learnMoreHref": "/services",
+        "icon": "security",
+        "color": "cyan"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Beautiful, intuitive interfaces designed to enhance user engagement and drive conversions.",
+        "learnMoreHref": "/services",
+        "icon": "design",
+        "color": "pink"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "sectionBadge": "Why Choose Us",
+    "sectionTitle": "Driving Digital",
+    "sectionTitleGradient": "Transformation",
+    "sectionSubtitle": "At 'TS Global Tech', we don't just build software – we create technology solutions that drive business growth and innovation. Our team of experts combines decades of experience with cutting-edge technologies to deliver results that matter.",
+    "features": [
+      {
+        "title": "Agile Development",
+        "description": "Iterative approach ensuring flexibility and continuous improvement throughout the project lifecycle."
+      },
+      {
+        "title": "Scalable Solutions",
+        "description": "Future-proof architecture designed to grow seamlessly with your business requirements."
+      },
+      {
+        "title": "24/7 Support",
+        "description": "Dedicated support team available round the clock to ensure your systems run smoothly."
+      }
+    ],
+    "featureCards": [
+      { "title": "Fast Delivery", "subtitle": "On-time project completion", "icon": "lightning" },
+      { "title": "Secure", "subtitle": "Enterprise-grade security", "icon": "shield" },
+      { "title": "Cost-Effective", "subtitle": "Competitive pricing", "icon": "currency" },
+      { "title": "Expert Team", "subtitle": "Industry veterans", "icon": "users" }
+    ]
+  },
+  "testimonials": {
+    "sectionBadge": "Testimonials",
+    "sectionTitle": "What Our",
+    "sectionTitleGradient": "Clients Say",
+    "sectionSubtitle": "Don't just take our word for it – hear from some of our satisfied clients about their experience working with 'TS Global Tech'.",
+    "items": [
+      {
+        "quote": "'TS Global Tech' transformed our digital presence completely. Their team delivered our hotel management platform ahead of schedule and exceeded all expectations. The attention to detail and technical expertise is outstanding.",
+        "author": "Anurag Mishra",
+        "initials": "AM",
+        "role": "Owner",
+        "rating": 5
+      },
+      {
+        "quote": "Working with 'TS Global Tech' was a game-changer for our interior-design startup. Their AI solutions helped us automate processes that were consuming 40% of our team's time. Highly recommended!",
+        "author": "Pankaj Kumar",
+        "initials": "PK",
+        "role": "Founder, White Oak Interior",
+        "rating": 5
+      },
+      {
+        "quote": "The block chain solutions provided by 'TS Global Tech' are top-notch. Their team was professional, responsive, and delivered exactly what we needed.",
+        "author": "Rajendra Kumar",
+        "initials": "RK",
+        "role": "IT Head",
+        "rating": 5
+      }
+    ]
+  },
+  "cta": {
+    "sectionTitle": "Ready to Transform Your",
+    "sectionTitleGradient": "Digital Presence?",
+    "sectionSubtitle": "Let's discuss your project and discover how 'TS Global Tech' can help you achieve your business goals with cutting-edge technology solutions.",
+    "ctaPrimary": {
+      "text": "Get Free Consultation",
+      "href": "/contact"
+    },
+    "ctaSecondary": {
+      "text": "View Our Portfolio",
+      "href": "/portfolio"
+    }
+  },
+  "navigation": {
+    "ctaText": "Get Started",
+    "ctaHref": "/contact"
+  }
+}

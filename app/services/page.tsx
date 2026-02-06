@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import Navigation from "../components/Navigation";
 import PageHero from "../components/PageHero";
+import { common } from "../content";
 
 // export const metadata: Metadata = {
 //   title: "Our Services - TechVision | IT Solutions Company",
@@ -26,6 +27,75 @@ export default function Services() {
       {/* Services Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* AI & Machine Learning */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
+            <div className="lg:order-2">
+              <div className="bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl p-8 border border-white/10">
+                <div className="bg-dark-800 rounded-2xl p-6 border border-white/5">
+                  <div className="flex items-center justify-center h-48">
+                    <div className="relative">
+                      <div className="w-32 h-32 border-4 border-primary-500/30 rounded-full"></div>
+                      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
+                      <div className="absolute inset-4 flex items-center justify-center">
+                        <svg className="w-12 h-12 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:order-1">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">AI & Machine Learning</h2>
+              <p className="text-dark-400 text-lg mb-6">
+                Transform your business with intelligent automation and data-driven insights. Our AI solutions help you stay ahead of the competition.
+              </p>
+              <ul className="space-y-3 mb-8">
+                 <li className="flex items-center gap-3 text-dark-300">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  AI Agents (Agentic solutions)
+                </li>
+                <li className="flex items-center gap-3 text-dark-300">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Predictive Analytics
+                </li>
+                <li className="flex items-center gap-3 text-dark-300">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Natural Language Processing
+                </li>
+                <li className="flex items-center gap-3 text-dark-300">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Computer Vision
+                </li>
+                <li className="flex items-center gap-3 text-dark-300">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Chatbots & Virtual Assistants
+                </li>
+              </ul>
+              <a href="/contact" className="btn-primary inline-flex items-center gap-2">
+                Get Started
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
           {/* Web Development */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
             <div>
@@ -61,7 +131,7 @@ export default function Services() {
                   <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  CMS Development (WordPress, Shopify, etc.)
+                  CMS Development
                 </li>
               </ul>
               <a href="/contact" className="btn-primary inline-flex items-center gap-2">
@@ -84,7 +154,7 @@ export default function Services() {
                   </div>
                   <div className="font-mono text-sm space-y-2">
                     <div className="text-secondary-400">{"<div class=\"hero\">"}</div>
-                    <div className="pl-4 text-dark-300">{"<h1>Welcome to TechVision</h1>"}</div>
+                    <div className="pl-4 text-dark-300">{`<h1>Welcome to ${common.companyName}</h1>`}</div>
                     <div className="pl-4 text-dark-300">{"<p>Innovation meets excellence</p>"}</div>
                     <div className="text-secondary-400">{"</div>"}</div>
                   </div>
@@ -229,69 +299,7 @@ export default function Services() {
             </div>
           </div>
 
-          {/* AI & Machine Learning */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
-            <div className="lg:order-2">
-              <div className="bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl p-8 border border-white/10">
-                <div className="bg-dark-800 rounded-2xl p-6 border border-white/5">
-                  <div className="flex items-center justify-center h-48">
-                    <div className="relative">
-                      <div className="w-32 h-32 border-4 border-primary-500/30 rounded-full"></div>
-                      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
-                      <div className="absolute inset-4 flex items-center justify-center">
-                        <svg className="w-12 h-12 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="lg:order-1">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">AI & Machine Learning</h2>
-              <p className="text-dark-400 text-lg mb-6">
-                Transform your business with intelligent automation and data-driven insights. Our AI solutions help you stay ahead of the competition.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-dark-300">
-                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  Predictive Analytics
-                </li>
-                <li className="flex items-center gap-3 text-dark-300">
-                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  Natural Language Processing
-                </li>
-                <li className="flex items-center gap-3 text-dark-300">
-                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  Computer Vision
-                </li>
-                <li className="flex items-center gap-3 text-dark-300">
-                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  Chatbots & Virtual Assistants
-                </li>
-              </ul>
-              <a href="/contact" className="btn-primary inline-flex items-center gap-2">
-                Get Started
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
+          
 
           {/* Cybersecurity */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">

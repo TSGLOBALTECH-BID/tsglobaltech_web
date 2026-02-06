@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PageHero from "../components/PageHero";
+import { common } from '../content';
 
 // export const metadata: Metadata = {
 //   title: "Contact Us - TechVision | IT Solutions Company",
@@ -70,7 +71,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="form-group">
-                    <label htmlFor="firstName" className="form-label">First Name *</label>
+                    <label htmlFor="firstName" className="form-label">First Name</label>
                     <input
                       type="text"
                       id="firstName"
@@ -78,12 +79,11 @@ export default function Contact() {
                       value={formData.firstName}
                       onChange={handleChange}
                       className="form-input"
-                      placeholder="John"
-                      required
+                      placeholder="Jitendra"
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="lastName" className="form-label">Last Name *</label>
+                    <label htmlFor="lastName" className="form-label">Last Name</label>
                     <input
                       type="text"
                       id="lastName"
@@ -91,8 +91,7 @@ export default function Contact() {
                       value={formData.lastName}
                       onChange={handleChange}
                       className="form-input"
-                      placeholder="Doe"
-                      required
+                      placeholder="Kumar"
                     />
                   </div>
                 </div>
@@ -107,7 +106,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       className="form-input"
-                      placeholder="john@company.com"
+                      placeholder={common.contact.email}
                       required
                     />
                   </div>
@@ -120,12 +119,12 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="form-input"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder={common.contact.phone}
                     />
                   </div>
                 </div>
                 
-                <div className="form-group">
+                {/* <div className="form-group">
                   <label htmlFor="company" className="form-label">Company Name</label>
                   <input
                     type="text"
@@ -136,9 +135,9 @@ export default function Contact() {
                     className="form-input"
                     placeholder="Your Company Inc."
                   />
-                </div>
+                </div> */}
                 
-                <div className="form-group">
+                {/* <div className="form-group">
                   <label htmlFor="service" className="form-label">Service Interested In</label>
                   <select
                     id="service"
@@ -156,9 +155,9 @@ export default function Contact() {
                     <option value="uiux">UI/UX Design</option>
                     <option value="other">Other</option>
                   </select>
-                </div>
+                </div> */}
                 
-                <div className="form-group">
+                {/* <div className="form-group">
                   <label htmlFor="budget" className="form-label">Project Budget</label>
                   <select
                     id="budget"
@@ -173,10 +172,10 @@ export default function Contact() {
                     <option value="large">$75,000 - $150,000</option>
                     <option value="enterprise">$150,000+</option>
                   </select>
-                </div>
+                </div> */}
                 
                 <div className="form-group">
-                  <label htmlFor="message" className="form-label">Project Description *</label>
+                  <label htmlFor="message" className="form-label">Message</label>
                   <textarea
                     id="message"
                     name="message"
@@ -184,7 +183,6 @@ export default function Contact() {
                     onChange={handleChange}
                     className="form-textarea"
                     placeholder="Tell us about your project, goals, and timeline..."
-                    required
                   ></textarea>
                 </div>
                 
@@ -223,8 +221,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-heading text-lg font-semibold text-white mb-1">Phone</h3>
-                    <p className="text-dark-400">+1 (555) 123-4567</p>
-                    <p className="text-dark-500 text-sm">Mon-Fri, 9am-6pm PST</p>
+                    <p className="text-dark-400">{common.contact.phone}</p>
+                    <p className="text-dark-500 text-sm">24/7 Support</p>
                   </div>
                 </div>
                 
@@ -236,7 +234,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-heading text-lg font-semibold text-white mb-1">Email</h3>
-                    <p className="text-dark-400">info@techvision.com</p>
+                    <p className="text-dark-400">{common.contact.email}</p>
                     <p className="text-dark-500 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -249,15 +247,14 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-white mb-1">Office</h3>
-                    <p className="text-dark-400">123 Tech Street</p>
-                    <p className="text-dark-400">Silicon Valley, CA 94025</p>
+                    <h3 className="font-heading text-lg font-semibold text-white mb-1">Reg. Office</h3>
+                    <p className="text-dark-400">{common.contact.address}</p>
                   </div>
                 </div>
               </div>
 
               {/* FAQ Section */}
-              <div className="bg-dark-900/50 rounded-2xl p-6 border border-white/10">
+              {/* <div className="bg-dark-900/50 rounded-2xl p-6 border border-white/10">
                 <h3 className="font-heading text-lg font-semibold text-white mb-4">Frequently Asked Questions</h3>
                 
                 <div className="space-y-4">
@@ -297,7 +294,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -308,7 +305,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl font-bold text-white mb-4">Visit Our Office</h2>
-            <p className="text-dark-400">Located in the heart of Silicon Valley</p>
+            {/* <p className="text-dark-400">Located in the heart of Silicon Valley</p> */}
           </div>
           <div className="bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl p-8 border border-white/10">
             <div className="aspect-[21/9] bg-dark-800 rounded-2xl flex items-center justify-center border border-white/5">
@@ -319,9 +316,9 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-white mb-2">TechVision HQ</h3>
-                <p className="text-dark-400">123 Tech Street, Silicon Valley, CA 94025</p>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary-400 mt-4 hover:text-primary-300 transition-colors">
+                <h3 className="font-heading text-xl font-semibold text-white mb-2">{common.companyName} HQ</h3>
+                <p className="text-dark-400">{common.contact.address}</p>
+                <a href={`https://maps.google.com/?q=${common.contact.lattitude},${common.contact.longitude}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary-400 mt-4 hover:text-primary-300 transition-colors">
                   Open in Google Maps
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -342,7 +339,12 @@ export default function Contact() {
           </h2>
           <p className="text-lg text-dark-300 mb-10">Let's schedule a free consultation to discuss your project.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="tel:+15551234567" className="btn-primary text-lg px-8 py-4">Call Us Now</a>
+            <a href={`https://wa.me/${common.contact.phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-8 py-4">
+              Connect Now
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.546 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+            </a>
             <a href="/services" className="btn-secondary text-lg px-8 py-4">Explore Services</a>
           </div>
         </div>

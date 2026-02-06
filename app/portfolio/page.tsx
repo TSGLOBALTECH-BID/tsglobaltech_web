@@ -1,11 +1,9 @@
 'use client';
 import type { Metadata } from "next";
 
-import { useEffect, useState } from "react";
-import Loading from "../components/Loading";
-import Navigation from "../components/Navigation";
 import PageHero from "../components/PageHero";
 import { usePortfolioFilter } from "../utils/interactions";
+import { common } from "../content";
 
 // export const metadata: Metadata = {
 //   title: "Our Portfolio - TechVision | IT Solutions Company",
@@ -53,7 +51,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 - E-Commerce Platform */}
             <div className="portfolio-item group" data-category="web">
-              <div className="w-full h-64 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-primary-500/20 to-secondary-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +62,7 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">Full-stack e-commerce solution with real-time inventory</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">E-Commerce Platform</h3>
                 <p className="text-dark-300 text-sm mb-4">Built a scalable e-commerce platform processing $10M+ annually</p>
                 <div className="flex flex-wrap gap-2">
@@ -72,12 +70,12 @@ export default function Portfolio() {
                   <span className="px-3 py-1 bg-secondary-500/20 text-secondary-400 text-xs rounded-full">Node.js</span>
                   <span className="px-3 py-1 bg-accent-500/20 text-accent-400 text-xs rounded-full">MongoDB</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 2 - Healthcare App */}
             <div className="portfolio-item group" data-category="mobile">
-              <div className="w-full h-64 bg-gradient-to-br from-secondary-500/20 to-accent-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-secondary-500/20 to-accent-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,19 +86,19 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">HIPAA-compliant telemedicine platform</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">Healthcare App</h3>
                 <p className="text-dark-300 text-sm mb-4">100K+ downloads with 4.8-star rating on app stores</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full">React Native</span>
                   <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Firebase</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 3 - Cloud Migration */}
             <div className="portfolio-item group" data-category="cloud">
-              <div className="w-full h-64 bg-gradient-to-br from-accent-500/20 to-green-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-accent-500/20 to-green-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,19 +109,19 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">Enterprise cloud migration for Fortune 500</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">Cloud Migration</h3>
                 <p className="text-dark-300 text-sm mb-4">Reduced infrastructure costs by 40% with AWS migration</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-orange-500/20 text-orange-400 text-xs rounded-full">AWS</span>
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Terraform</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 4 - AI Analytics Dashboard */}
             <div className="portfolio-item group" data-category="ai">
-              <div className="w-full h-64 bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,19 +132,19 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">Predictive analytics with machine learning</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">AI Analytics Dashboard</h3>
                 <p className="text-dark-300 text-sm mb-4">95% accuracy in predictive modeling for sales forecasting</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-secondary-500/20 text-secondary-400 text-xs rounded-full">Python</span>
                   <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">TensorFlow</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 5 - SaaS Dashboard */}
             <div className="portfolio-item group" data-category="web">
-              <div className="w-full h-64 bg-gradient-to-br from-pink-500/20 to-primary-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-pink-500/20 to-primary-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,19 +155,19 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">Enterprise SaaS platform with real-time data</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">SaaS Dashboard</h3>
                 <p className="text-dark-300 text-sm mb-4">Serving 500+ enterprise clients with 99.99% uptime</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full">Vue.js</span>
                   <span className="px-3 py-1 bg-secondary-500/20 text-secondary-400 text-xs rounded-full">Python</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 6 - Fitness App */}
             <div className="portfolio-item group" data-category="mobile">
-              <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-secondary-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-cyan-500/20 to-secondary-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,19 +178,19 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">AI-powered personal fitness trainer</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">Fitness App</h3>
                 <p className="text-dark-300 text-sm mb-4">500K+ active users with personalized workout plans</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Flutter</span>
                   <span className="px-3 py-1 bg-secondary-500/20 text-secondary-400 text-xs rounded-full">ML Kit</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 7 - Learning Platform */}
             <div className="portfolio-item group" data-category="web">
-              <div className="w-full h-64 bg-gradient-to-br from-yellow-500/20 to-accent-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-yellow-500/20 to-accent-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -203,19 +201,19 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">EdTech platform with live collaboration</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">Learning Platform</h3>
                 <p className="text-dark-300 text-sm mb-4">50K+ students enrolled with 95% completion rate</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full">Next.js</span>
                   <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">WebRTC</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 8 - Serverless Platform */}
             <div className="portfolio-item group" data-category="cloud">
-              <div className="w-full h-64 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -226,19 +224,19 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">Event-driven serverless architecture</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">Serverless Platform</h3>
                 <p className="text-dark-300 text-sm mb-4">Handling 1M+ events daily with zero downtime</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-orange-500/20 text-orange-400 text-xs rounded-full">AWS Lambda</span>
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">DynamoDB</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Project 9 - Chatbot Platform */}
             <div className="portfolio-item group">
-              <div className="w-full h-64 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -249,14 +247,14 @@ export default function Portfolio() {
                   <p className="text-dark-400 text-sm">NLP-powered customer support chatbot</p>
                 </div>
               </div>
-              <div className="portfolio-overlay">
+              {/* <div className="portfolio-overlay">
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">Chatbot Platform</h3>
                 <p className="text-dark-300 text-sm mb-4">Reduced support tickets by 60% with 24/7 automation</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-secondary-500/20 text-secondary-400 text-xs rounded-full">OpenAI</span>
                   <span className="px-3 py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full">Node.js</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -267,20 +265,20 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-primary-400 mb-2">500+</div>
-              <div className="text-dark-400">Projects Completed</div>
+              <div className="text-4xl font-bold text-primary-400 mb-2">{common.stats[0].value}+</div>
+              <div className="text-dark-400">{common.stats[0].label}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-secondary-400 mb-2">150+</div>
-              <div className="text-dark-400">Happy Clients</div>
+              <div className="text-4xl font-bold text-secondary-400 mb-2">{common.stats[1].value}+</div>
+              <div className="text-dark-400">{common.stats[1].label}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-accent-400 mb-2">15+</div>
-              <div className="text-dark-400">Years Experience</div>
+              <div className="text-4xl font-bold text-accent-400 mb-2">{common.stats[2].value}+</div>
+              <div className="text-dark-400">{common.stats[2].label}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">30+</div>
-              <div className="text-dark-400">Countries Served</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">{common.stats[3].value}+</div>
+              <div className="text-dark-400">{common.stats[3].label}</div>
             </div>
           </div>
         </div>

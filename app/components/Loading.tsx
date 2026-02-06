@@ -1,3 +1,5 @@
+import { common } from '../content';
+
 interface LoadingProps {
   companyName?: string;
   size?: 'sm' | 'md' | 'lg';
@@ -5,7 +7,7 @@ interface LoadingProps {
 }
 
 export default function Loading({ 
-  companyName = "TechVision", 
+  companyName = common.companyName, 
   size = 'md',
   className = ""
 }: LoadingProps) {
