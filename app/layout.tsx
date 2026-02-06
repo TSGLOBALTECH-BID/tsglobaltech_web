@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import LoadingProvider from "./components/LoadingProvider";
+import { common } from "./content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TechVision - IT Solutions & Digital Transformation",
+  title: `${common.companyName} - IT Solutions & Digital Transformation`,
   description: "Leading IT solutions provider offering web development, mobile apps, cloud services, and AI solutions for digital transformation.",
 };
 

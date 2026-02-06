@@ -3,20 +3,24 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useMobileMenu } from '../utils/interactions';
 import { common, navigation } from '../content';
 
 export default function Navigation() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Use the custom mobile menu hook
-  useMobileMenu();
-
   const isActive = (href: string) => {
     if (href === '/' && pathname === '/') return true;
     if (href !== '/' && pathname.startsWith(href)) return true;
     return false;
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   useEffect(() => {
@@ -82,10 +86,15 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button 
             id="mobile-menu-btn"
-            className="lg:hidden p-2 text-dark-300 hover:text-white transition-colors"
+            onClick={toggleMobileMenu}
+            className="flex md:hidden p-2 text-dark-300 hover:text-white transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+              )}
             </svg>
           </button>
         </div>
@@ -94,13 +103,14 @@ export default function Navigation() {
       {/* Mobile Menu */}
       <div 
         id="mobile-menu"
-        className="lg:hidden absolute top-full left-0 right-0 bg-dark-900/95 backdrop-blur-xl border-t border-white/5 transition-all duration-300 hidden"
+        className={`absolute top-full left-0 right-0 bg-dark-900/95 backdrop-blur-xl border-t border-white/5 transition-all duration-300 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
       >
         <div className="px-4 py-6 space-y-4">
           {common.navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              onClick={closeMobileMenu}
               className={`mobile-nav-link ${isActive(item.href) ? 'active' : ''}`}
             >
               {item.name}
@@ -109,6 +119,7 @@ export default function Navigation() {
           <Link 
             href={navigation.ctaHref} 
             className="btn-primary w-full justify-center mt-4"
+            onClick={closeMobileMenu}
           >
             {navigation.ctaText}
           </Link>
