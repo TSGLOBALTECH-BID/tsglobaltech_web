@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { common } from "../content";
+import { Toast } from "../components/Toast";
 
 export default function ContactForm() {
 
@@ -17,6 +18,19 @@ export default function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState({
+    isVisible: false,
+    message: '',
+    type: 'success' as 'success' | 'error' | 'info'
+  });
+
+  const showToast = (message: string, type: 'success' | 'error' | 'info') => {
+    setToast({ isVisible: true, message, type });
+  };
+
+  const hideToast = () => {
+    setToast(prev => ({ ...prev, isVisible: false }));
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -30,7 +44,7 @@ export default function ContactForm() {
     // Validate required fields according to API requirements
     const fullName = `${formData.firstName} ${formData.lastName}`.trim();
     if ((!formData.email && !formData.phone)) {
-      alert("Either email or phone is required!");
+      showToast("Either email or phone is required!", "error");
       return;
     }
 
@@ -50,7 +64,7 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        alert("Thank you for your message! We'll get back to you within 24 hours.");
+        showToast("Thank you for your message! We'll get back to you within 24 hours.", "success");
         setFormData({
           firstName: "",
           lastName: "",
@@ -62,11 +76,11 @@ export default function ContactForm() {
           message: "",
         });
       } else {
-        alert("There was a problem sending email. Pls try again!");
+        showToast("There was a problem sending email. Please try again!", "error");
       }
     } catch (error) {
       console.log("Error sending email:", error);
-      alert("There was a problem sending email. Pls try again!");
+      showToast("There was a problem sending email. Please try again!", "error");
     } finally {
       setIsSubmitting(false);
     }
@@ -312,5 +326,11 @@ return (<>
       </div>
     </div>
   </section>
+  <Toast
+    message={toast.message}
+    type={toast.type}
+    isVisible={toast.isVisible}
+    onClose={hideToast}
+  />
 </>)
 }
